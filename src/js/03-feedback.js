@@ -4,14 +4,12 @@ const STORAGE_KEY = 'feedback-form-state';
 
 const formAllValues = {};
 
-const feedbackForm = {
-    form: document.querySelector('.feedback-form')
-};
+const feedbackForm = document.querySelector('.feedback-form');
 feedbackForm.form.addEventListener('input', throttle(onTextInput, 500));
 feedbackForm.form.addEventListener('submit', onFormSubmit);
 
 function onTextInput(event) {
-    formAllValues[event.targer.name] = event.targer.value;
+    formAllValues[event.target.name] = event.target.value;
     const formAllValuesJSON = JSON.stringify(formAllValues);
     localStorage.setItem(STORAGE_KEY, formAllValuesJSON);
 }
