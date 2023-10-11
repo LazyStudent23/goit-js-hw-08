@@ -33,10 +33,10 @@ function receivingLocalStorage() {
     if (savedValue) {
         const parsedValue = JSON.parse(savedValue);
         if (parsedValue.email) {
-            feedbackForm.form.elements.email.value = parsedValue.email;
+            feedbackForm.elements.email.value = parsedValue.email;
         }
         if (parsedValue.message) {
-            feedbackForm.form.elements.message.value = parsedValue.message;
+            feedbackForm.elements.message.value = parsedValue.message;
         }
     }
 }
