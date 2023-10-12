@@ -13,7 +13,7 @@ feedbackForm.addEventListener('submit', onFormSubmit);
 
 function onTextInput(event) {
     formAllValues[event.target.name] = event.target.value;
-    const formAllValuesJSON = JSON.stringify(formAllValues);
+    const formAllValuesJSON = JSON.stringify(dataForm);
     localStorage.setItem(STORAGE_KEY, formAllValuesJSON);
 }
 
