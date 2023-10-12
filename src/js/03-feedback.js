@@ -3,7 +3,7 @@ import throttle from 'lodash.throttle';
 const STORAGE_KEY = 'feedback-form-state';
 
 // const formAllValues = {};
-let dataForm = JSON.parse(localStorage.getItem(LOCAL_KEY)) || {};
+let dataForm = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
 const { email, message } = form.elements;
 reloadPage();
 
